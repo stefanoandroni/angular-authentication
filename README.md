@@ -16,13 +16,13 @@ This repository contains a simple reusable login component for implementing both
 
 ## Overview
 
-## SignIn (Success)
+### SignIn (Success)
 ![](images/signin_success.gif)
 
-## SignIn (Failure)
+### SignIn (Failure)
 ![](images/signin_fail.gif)
 
-## SignUp
+### SignUp
 ![](images/signup_success.gif)
 
 ## Structure
