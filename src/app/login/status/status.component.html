@@ -1,0 +1,6 @@
+<div [ngSwitch]="status">
+    <mat-progress-bar *ngSwitchCase="'initial'" value="100" color="primary"></mat-progress-bar>
+    <mat-progress-bar *ngSwitchCase="'pending'" mode="indeterminate" color="primary"></mat-progress-bar>
+    <mat-progress-bar *ngSwitchCase="'success'" value="100" mode="determinate" class="success"></mat-progress-bar>
+    <mat-progress-bar *ngSwitchCase="'error'" value="100" mode="determinate" color="warn"></mat-progress-bar>
+</div>

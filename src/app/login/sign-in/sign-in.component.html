@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+  <!-- EMAIL -->
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <mat-icon matPrefix color="primary">email</mat-icon>
+    <input matInput type="email" formControlName="email" [errorStateMatcher]="matcher"
+      placeholder="Ex. pat@example.com" />
+    <mat-error *ngIf="this.email.hasError('email') && !this.email.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="this.email.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <!-- PASSWORD -->
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <mat-icon matPrefix color="primary">lock</mat-icon>
+    <input matInput [type]="isPasswordVisible ? 'text' : 'password'" formControlName="password" [errorStateMatcher]="matcher"/>
+    <button type="button" mat-icon-button matSuffix (click)="toggleVisibility()" tabindex="-1">
+      <mat-icon *ngIf="isPasswordVisible">visibility</mat-icon>
+      <mat-icon *ngIf="!isPasswordVisible">visibility_off</mat-icon>
+    </button>
+    <mat-error *ngIf="this.password.hasError('required')">
+      Password is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <!-- BUTTON -->
+  <button mat-raised-button [disabled]="!form.valid || disabled" color="primary">
+    Sign In
+  </button>
+</form>

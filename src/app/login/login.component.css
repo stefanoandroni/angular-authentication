@@ -1,0 +1,14 @@
+mat-card {
+  max-width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  background: rgb(255, 255, 255, .8);
+
+}
+
+mat-tab-nav-panel {
+  padding: 2rem;
+}

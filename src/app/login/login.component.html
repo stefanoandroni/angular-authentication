@@ -1,0 +1,16 @@
+<mat-card>
+    <!-- TAB -->
+    <nav mat-tab-nav-bar mat-stretch-tabs="false" mat-align-tabs="center" [tabPanel]="tabPanel">
+        <a mat-tab-link (click)="mode$.next('signin')" [active]="(mode$ | async) === 'signin'">Login</a>
+        <a mat-tab-link (click)="mode$.next('signup')" [active]="(mode$ | async) === 'signup'">Register</a>
+    </nav>
+    <!-- PANEL -->
+    <mat-tab-nav-panel #tabPanel>
+        <app-sign-in *ngIf="(mode$ | async) === 'signin'" (formSubmitted)="signIn$.next($event)" [disabled]="(status$ | async) === 'pending'"></app-sign-in>
+        <app-sign-up *ngIf="(mode$ | async) === 'signup'" (formSubmitted)="signUp$.next($event)" [disabled]="(status$ | async) === 'pending'"></app-sign-up>
+    </mat-tab-nav-panel>
+    <!-- STATUS BAR -->
+    <mat-card-footer>
+        <app-status [status]="(status$ | async) || 'initial'"></app-status>
+    </mat-card-footer>
+</mat-card>
