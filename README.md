@@ -12,7 +12,7 @@
 
 (Angular + AngularMaterial + RxJS)   
 
-This repository contains a simple reusable login component for implementing both **sign-in** and **sign-up** functionality in an Angular application. 
+This repository contains a simple reusable login component for implementing both **sign-in** and **sign-up** functionality in an Angular application. The repository also includes a collection of useful features and utilities, including guards, directives, interceptors, Validators, and ErrorStateMatchers.
 
 ## Overview
 
@@ -27,22 +27,31 @@ This repository contains a simple reusable login component for implementing both
 
 ## Structure
 
-- *service* **AuthService** (providedIn: 'root')
+- *service* **AuthService** (providedIn: 'root') *(mockup)*
+
+- *service* **JwtService** (providedIn: 'root') *(mockup)*
 
 - *module* **MaterialModule**
 
 - *module* **AppModule**
     - *c:* AppComponent
         - *c:* HelloComponent
-    - *m:* MaterialModule
-
+    - *m:* MaterialModule *(import)*
 
 - *module* **LoginModule**
     - *c:* LoginComponent   
         - *c:* SignInComponent  
         - *c:* SignUpComponent  
         - *c:* StatusComponent
-    - *m:* MaterialModule
+    - *d:* IsAuthenticatedDirective
+    - *m:* MaterialModule *(import)*
+
+- *interceptor* **TokenInterceptor**
+
+- *guard* **IsAuthenticatedGuard**
+
+- *guard* **IsNotAuthenticatedGuard**
+
 
 ## Features
 - Angular
@@ -50,6 +59,9 @@ This repository contains a simple reusable login component for implementing both
 - Angular Material ErrorStateMatcher
 - Reactive Forms
 - Form Validators (built-in + custom)
+- Guard
+- Interceptor
+- Custom Directive
 - ChangeDetectionStrategy.OnPush for all components
 - RxJS
 - Login States

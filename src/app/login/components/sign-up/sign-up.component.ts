@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { Credentials } from '../models';
+import { Credentials } from '../../models/models';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { BasicErrorStateMatcher, EqualFieldsErrorStateMatcher } from '../utils/error-state-matchers';
-import { equalFieldsValidator } from '../utils/equal-fields.validator';
+import { BasicErrorStateMatcher, EqualFieldsErrorStateMatcher } from '../../utils/error-state-matchers';
+import { equalFieldsValidator } from '../../utils/equal-fields.validator';
 
 @Component({
   selector: 'app-sign-up',

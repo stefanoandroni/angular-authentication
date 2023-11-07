@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Status } from '../models';
+import { Status } from '../../models/models';
 
 @Component({
   selector: 'app-status',

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable, Subject, catchError, exhaustMap, map, merge, of, skip, takeUntil, withLatestFrom } from 'rxjs';
-import { Credentials, Mode, Status } from './models';
+import { Credentials, Mode, Status } from './models/models';
 import { AuthService } from '../services/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ErrorMessage } from './constants';

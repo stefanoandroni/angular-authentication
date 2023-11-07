@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { Credentials } from '../models';
+import { Credentials } from '../../models/models';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { BasicErrorStateMatcher } from '../utils/error-state-matchers';
+import { BasicErrorStateMatcher } from '../../utils/error-state-matchers';
 
 @Component({
   selector: 'app-sign-in',
